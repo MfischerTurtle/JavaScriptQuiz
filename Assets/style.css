@@ -1,48 +1,219 @@
-body {
-    background-color: #f2f2f2; 
-}
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary: #21aa0fc5;
+    --secondary: #0b08d3;
+    --tertiary: rgb(238, 102, 12);
+    --white: rgb(248, 247, 247);
+    font-size: 62.5%;
+  }
 
-h1, 
-h2 {
-    color: #313740;
-    font-family: 'Montserrat', sans-serif;
-}
+  body {
+    background: #000000;
+    color: var(--secondary);
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Header */
+  header {
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      width: 85%;
+  }
 
-a {
-    color: #3290A6;
-    font-family: 'Archivo', sans-serif;
-}
+  #viewhighscores:hover {
+      cursor: pointer;
+      color: var(--tertiary)
+  }
 
-a:hover {
-    color: #99B8BF;
-    font-family: 'Archivo', sans-serif;
-}
+  header h4 {
+      padding-left: 20px;
+      font-size: 2.0rem;
+      display: inline;
+  }
+  
+ .timer {
+      font-size: 2.0rem;
+      color: var(--secondary);
+      display: inline;
+      text-align: right;
+      padding-right: 20px;
+  }
 
-.btn:focus, .btn:active, .btn:visited {
-    outline: none !important;
-    box-shadow: none !important;
-    background-color: #343a40;
-}
+  /*Main content */
+.container {
+      padding: 20px;
+      flex-direction: column;
+      width: 50%;
+      margin: auto;
+  }
 
-#finalScore {
-    font-family: 'Montserrat', sans-serif;
+  
+ h1 {
+    color: var(--primary);
+    font-size: 3.5rem;
     font-weight: bold;
+  }
+
+  p {
+    color: var(--secondary);
+    font-size: 2.0rem;
+  }
+
+  .start {
+    align-items: center;
+    text-align: center;
+    }
+  
+ .start h1, .start p {
+     text-align: center;
+ }
+
+  .questions {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    margin: auto;
+  }
+
+  .end h1, .end p {
+      text-align: left
+  }
+
+  .end input {
+    outline: thick; 
+    border-width: 1px;
+    padding: 5px;
+    width: 35%;
+    font-size: 2.2rem;
+    border-radius: 5px;
+  }
+
+  .end input:focus {
+    border: 2px solid var(--secondary);
+  }
+
+  .show {
+      display: flex;
+  }
+
+  .hide {
+      display: none;
+  }
+
+  #question {
+    color: var(--primary);
+    text-align: left;
+    font-size: 3.0rem;
+    font-weight: bold;
+  }
+
+  #high-score {
+      text-align: left;
+  }
+
+  /*Button Styling */
+  .btn {
+      background: var(--secondary);
+      color: var(--white);
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 3px rgb(147, 4, 243);
+      margin-top: 10px;
+  }
+
+  .btn:hover {
+      background: var(--tertiary);
+      border-radius: 10px;
+      box-shadow: 0 2px rgb(158, 4, 247);
+      cursor: pointer;
+  }
+
+  .btn:active {
+      border: none;
+      outline: none;
+      box-shadow: 0 0 rgb(2, 216, 245);
+  }
+
+  .btn:focus {
+      outline: none;
+  }
+
+  .btn-grid {
+      display: grid;
+      grid-template-rows: repeat(4, auto);
+      grid-gap: 5px;
+      margin: 20px 0;
+  }
+
+ .startend {
+     width: 25%;
+     margin-top: 10px;
+ }
+
+ .answerbtn {
+     width: 50%;
+     text-align: left;
+     font-size: 3.0vw;
+ }
+
+ /* correct/wrong styling */
+
+ .banner {
+     font-size: 25px;
+     text-align: center;
+     color: rgba(192, 11, 247, 0.8);
+     font-style: italic;
+     margin: 0 100px;
+ }
+
+.banner h2 {
+    border-top: 2px solid rgba(182, 4, 226, 0.8);
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
 }
 
-span {
-    font-family: 'Archivo', sans-serif;
+/* List for High Scores */
+ 
+ ol {
+    list-style-type: number;
+ }
+
+ li:nth-child(odd) {
+     background-color: rgba(163, 6, 150, 0.5);;
+ }
+
+
+li {
+    font-size: 4.0vw;
 }
 
-p {
-    font-family: 'Archivo', sans-serif;
-}
 
-#questionTitle {
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-}
 
-#answerCheck {
-    font-style: italic;
-    color: #4D5159;
+@media screen and (max-width: 1024px) {
+
+    .btn {
+        width: 100%;
+        font-size: 3.0vw;
+    }
+
+    #question {
+        font-size: 4.5vw;
+    }
+
+    h1 {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 3.0vw;
+    }
+
 }
