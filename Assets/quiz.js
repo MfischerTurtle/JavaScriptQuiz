@@ -323,9 +323,7 @@ var clearScores = function () {
 
 loadHighScore()
 //allow page to work cuz of Floc
-const { id, version } = await document.interestCohort();
-console.log('FLoC ID:', id);
-console.log('FLoC version:', version);
+
   
 //on start click, start game
 btnStartEl.addEventListener("click", startGame)
