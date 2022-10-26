@@ -10,7 +10,7 @@ var correctEl = document.getElementById("correct")
 var wrongEl = document.getElementById("wrong")
 //buttons
 var btnStartEl = document.querySelector("#startgame");
-var btnGoBackEl = document.querySelector("#goback")
+var btnGoBackEl = document.querySelector("#back")
 var btnClearScoresEl = document.querySelector("#clearhighscores")
 //questions/answers element
 var questionEl = document.getElementById("question")
